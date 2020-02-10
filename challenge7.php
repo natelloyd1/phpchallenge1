@@ -1,18 +1,15 @@
 <?php
- 
- $total = ""; 
 
-for ($i = 1; $i <= 100; $i += 1) {
+for ($i = 1; $i <= 100; $i += 1)  {
+    $total = "";
+
     if ($i % 3 === 0) {
-    $total += "Fizz";
-    } if ($i % 5 === 0) {
-    $total += "Buzz";
-    } if  ($total === "") {
-        $total += "";
-            // $total = $i;
-    };
-    echo $total . "\n";
-    $total = ""; 
+        $total .= "Fizz";
+    } 
+    if ($i % 5 === 0) {
+        $total .= "Buzz";
+    } 
+    echo ($total !== "" ? $total : $i) . "\n";
 };
 
 // let total = ""
